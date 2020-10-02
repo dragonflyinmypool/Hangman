@@ -1,0 +1,11 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 60px 120px 100px;
+}
+
+body {
+  background-color: black;
+  color: green;
+}
