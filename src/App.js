@@ -4,7 +4,8 @@ import WordDisplay from "./components/wordDisplay/wordDisplay.js";
 import Keyboard from "./components/keyboard/keyboard.js";
 
 const guessWords = ["FRANCE", "JAPAN", "UKRAINE", "COLOMBIA"];
-let currentWord = guessWords[Math.floor(Math.random() * guessWords.length)];
+let currentWord = [];
+currentWord = guessWords[Math.floor(Math.random() * guessWords.length)];
 const keyboard = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const lives = 5;
 

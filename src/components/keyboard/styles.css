@@ -1,8 +1,10 @@
 .key {
   margin: 5px;
-  height: 30px;
-  width: 20px;
-  background: green;
-  border: none;
+  height: 40px;
+  width: 30px;
+  color: green;
+  background: black;
+  border: 1px solid green;
   outline: none;
+  text-align: center;
 }
