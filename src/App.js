@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./styles.css";
 import WordDisplay from "./components/wordDisplay/wordDisplay.js";
 import Keyboard from "./components/keyboard/keyboard.js";
+import { goThroughLetters } from "./helpers/helpers";
 
-const guessWords = ["FRANCE", "JAPAN", "UKRAINE", "COLOMBIA"];
+const guessWords = ["FRANCE", "JAPAN"];
 let currentWord = [];
 currentWord = guessWords[Math.floor(Math.random() * guessWords.length)];
 const keyboard = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -17,16 +18,6 @@ export default function App() {
   function keyClick() {
     goThroughLetters(this);
     checkLives();
-  }
-
-  function goThroughLetters(a) {
-    if (currentWord.includes(a[0]) && !correctLetters.includes(a[0])) {
-      const newlist = correctLetters.concat(a[0]);
-      setCorrectLetters(newlist);
-    } else if (!currentWord.includes(a[0]) && !wrongLetters.includes(a[0])) {
-      const newlist = wrongLetters.concat(a[0]);
-      setWrongLetters(newlist);
-    }
   }
 
   function checkLives() {
