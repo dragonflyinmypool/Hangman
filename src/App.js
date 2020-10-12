@@ -38,12 +38,12 @@ export default function App() {
   return (
     <div className="App">
       <h3>HANGMAN</h3>
-      {/* <WordDisplay currentWord={currentWord} correctLetters={correctLetters} />
+      <WordDisplay currentWord={currentWord} correctLetters={correctLetters} />
       <Keyboard
         keyboard={keyboard}
         pickedLetters={pickedLetters}
         keyClick={keyClick}
-      /> */}
+      />
     </div>
   );
 }
