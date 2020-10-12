@@ -5,7 +5,7 @@ const wordDisplay = ({ currentWord, correctLetters }) => {
   let currentWordOne = currentWord.split("");
   let toDisplay = currentWordOne.map(function (a, i) {
     let letter;
-    console.log(correctLetters);
+
     if (correctLetters.includes(a)) {
       letter = a;
     } else {

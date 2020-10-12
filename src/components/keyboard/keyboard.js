@@ -2,8 +2,19 @@ import React from "react";
 import "./styles.css";
 
 const Keyboard = ({ keyboard, pickedLetters, keyClick }) => {
-  let keyboardHtml = keyboard.map((a) => (
-    <button onClick={keyClick.bind(a)} className="key" key={a}>
+  let updatedKeyboard = keyboard.map(function (a) {
+    let b;
+
+    if (pickedLetters.includes(a)) {
+      b = "";
+    } else {
+      b = a;
+    }
+    return b;
+  });
+  console.log(updatedKeyboard);
+  let keyboardHtml = updatedKeyboard.map((a, b) => (
+    <button onClick={keyClick.bind(a)} className="key" key={b}>
       {a}
     </button>
   ));
