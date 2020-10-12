@@ -27,7 +27,6 @@ export default function App() {
       const newlist = wrongLetters.concat(a[0]);
       setWrongLetters(newlist);
     }
-    console.log(wrongLetters);
   }
 
   function checkLives() {
