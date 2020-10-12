@@ -1,0 +1,9 @@
+.menuButtons {
+  margin: 5px;
+  height: 40px;
+  color: green;
+  background: black;
+  border: 1px solid green;
+  outline: none;
+  text-align: center;
+}

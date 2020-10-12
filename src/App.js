@@ -3,6 +3,7 @@ import "./styles.css";
 import WordDisplay from "./components/wordDisplay/wordDisplay.js";
 import Keyboard from "./components/keyboard/keyboard.js";
 import LivesDisplay from "./components/livesDisplay/livesDisplay.js";
+import Menu from "./components/menu/menu.js";
 
 const guessWords = ["FRANCE", "JAPAN"];
 let currentWord = [];
@@ -53,6 +54,7 @@ export default function App() {
         keyClick={keyClick}
       />
       <LivesDisplay lives={lives} />
+      <Menu />
     </div>
   );
 }

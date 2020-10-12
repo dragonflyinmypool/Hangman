@@ -1,0 +1,7 @@
+.lives {
+  display: flex;
+  justify-content: center;
+}
+.life {
+  margin: 4px;
+}

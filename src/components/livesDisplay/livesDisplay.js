@@ -10,10 +10,10 @@ const Lives = ({ lives }) => {
   }
 
   let allLives = livesArray.map(function (a) {
-    return <div>&#10084;</div>;
+    return <div className="life">&#10084;</div>;
   });
 
-  return <div className="keyboard">{allLives}</div>;
+  return <div className="lives">{allLives}</div>;
 };
 
 export default Lives;
