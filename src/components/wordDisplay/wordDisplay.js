@@ -14,7 +14,11 @@ const wordDisplay = ({ currentWord, correctLetters }) => {
     return letter;
   });
 
-  let display = toDisplay.map((a) => <div className="letter">{a}</div>);
+  let display = toDisplay.map((a, i) => (
+    <div className="letter" key={i}>
+      {a}
+    </div>
+  ));
 
   return <div className="display">{display}</div>;
 };

@@ -12,7 +12,6 @@ const Keyboard = ({ keyboard, pickedLetters, keyClick }) => {
     }
     return b;
   });
-  console.log(updatedKeyboard);
   let keyboardHtml = updatedKeyboard.map(function (a, b) {
     if (a === ".") {
       return (
