@@ -16,7 +16,6 @@ const Lives = ({ lives }) => {
       </div>
     );
   });
-
   return <div className="lives">{allLives}</div>;
 };
 

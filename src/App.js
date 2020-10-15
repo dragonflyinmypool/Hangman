@@ -16,6 +16,7 @@ export default function App() {
   const [wrongLetters, setWrongLetters] = useState([]);
   const [lives, setLives] = useState([10]);
 
+  // GAME PLAY
   function goThroughLetters(a) {
     if (currentWord.includes(a[0]) && !correctLetters.includes(a[0])) {
       const newlist = correctLetters.concat(a[0]);
@@ -33,20 +34,20 @@ export default function App() {
     }
   }
 
-  function keyClick() {
-    goThroughLetters(this);
-    checkLives();
-  }
-
+  // Check for game over
   function checkLives() {
     if (wrongLetters.length > lives) {
       console.log("the game is over");
     }
   }
 
+  function keyClick() {
+    goThroughLetters(this);
+    checkLives();
+  }
+
   return (
     <div className="App">
-      <h3>HANGMAN</h3>
       <WordDisplay currentWord={currentWord} correctLetters={correctLetters} />
       <Keyboard
         keyboard={keyboard}
