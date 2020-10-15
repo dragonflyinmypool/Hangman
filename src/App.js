@@ -5,16 +5,26 @@ import Keyboard from "./components/keyboard/keyboard.js";
 import LivesDisplay from "./components/livesDisplay/livesDisplay.js";
 import Menu from "./components/menu/menu.js";
 
-const guessWords = ["UNITED KINGDOM", "JAPAN"];
-let currentWord = [];
-currentWord = guessWords[Math.floor(Math.random() * guessWords.length)];
 const keyboard = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const guessWords = ["UNITED KINGDOM", "JAPAN"];
 
 export default function App() {
   const [correctLetters, setCorrectLetters] = useState([]);
   const [pickedLetters, setPickedLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
-  const [lives, setLives] = useState([10]);
+  const [lives, setLives] = useState([5]);
+  const [currentWord, setCurrentWord] = useState(
+    guessWords[Math.floor(Math.random() * guessWords.length)]
+  );
+
+  // NEW GAME
+  function newGame() {
+    setCorrectLetters([]);
+    setPickedLetters([]);
+    setWrongLetters([]);
+    setLives([5]);
+    setCurrentWord(guessWords[Math.floor(Math.random() * guessWords.length)]);
+  }
 
   // GAME PLAY
   function goThroughLetters(a) {
@@ -38,6 +48,7 @@ export default function App() {
   function checkLives() {
     if (wrongLetters.length > lives) {
       console.log("the game is over");
+      newGame();
     }
   }
 
@@ -55,7 +66,7 @@ export default function App() {
         keyClick={keyClick}
       />
       <LivesDisplay lives={lives} />
-      <Menu />
+      <Menu newGame={newGame} />
     </div>
   );
 }
