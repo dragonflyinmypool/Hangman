@@ -5,7 +5,7 @@ import Keyboard from "./components/keyboard/keyboard.js";
 import LivesDisplay from "./components/livesDisplay/livesDisplay.js";
 import Menu from "./components/menu/menu.js";
 
-const guessWords = ["FRANCE", "JAPAN"];
+const guessWords = ["UNITED KINGDOM", "JAPAN"];
 let currentWord = [];
 currentWord = guessWords[Math.floor(Math.random() * guessWords.length)];
 const keyboard = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");

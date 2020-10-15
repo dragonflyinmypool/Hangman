@@ -1,17 +1,17 @@
 .display {
-  margin-top: 70px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .letter {
-  margin: 2px;
-  height: 60px;
-  width: 45px;
+  margin: 3px;
+  height: 180px;
+  width: 130px;
 
   background-color: green;
 
-  font-size: 40px;
-  line-height: 65px;
+  font-size: 165px;
+  line-height: 180px;
   color: black;
 }

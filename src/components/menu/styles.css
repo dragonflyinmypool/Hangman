@@ -1,9 +1,10 @@
 .menuButtons {
-  margin: 5px;
-  height: 40px;
+  margin: 15px;
+  height: 100px;
   color: green;
   background: black;
   border: 1px solid green;
   outline: none;
   text-align: center;
+  font-size: 40px;
 }

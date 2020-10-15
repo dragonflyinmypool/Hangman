@@ -2,10 +2,12 @@
   font-family: sans-serif;
   text-align: center;
   display: grid;
-  grid-template-rows: 200px 200px 100px;
+  grid-template-rows: 475px 275px 165px 115px;
+  font-size: 60px;
+  align-content: center;
 }
 
 body {
-  background-color: black;
+  background-color: black;d
   color: green;
 }

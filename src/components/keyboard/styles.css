@@ -1,15 +1,22 @@
 .key,
 .keyclicked {
-  margin: 5px;
-  height: 40px;
-  width: 30px;
+  margin: 8px;
+  height: 120px;
+  width: 110px;
   color: green;
   background: black;
-  border: 1px solid green;
+  border: 3px solid green;
   outline: none;
   text-align: center;
+  font-size: 80px;
 }
 
 .keyclicked {
   color: black;
+}
+
+.keyboard {
+  padding: 0px 140px;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
 }
