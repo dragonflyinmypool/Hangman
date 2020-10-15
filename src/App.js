@@ -57,6 +57,13 @@ export default function App() {
     checkLives();
   }
 
+  //MENU FUNCTIONS
+  function showWord() {
+    setCorrectLetters(currentWord.split(""));
+    console.log(currentWord.split(""));
+    console.log(correctLetters);
+  }
+
   return (
     <div className="App">
       <WordDisplay currentWord={currentWord} correctLetters={correctLetters} />
@@ -66,7 +73,7 @@ export default function App() {
         keyClick={keyClick}
       />
       <LivesDisplay lives={lives} />
-      <Menu newGame={newGame} />
+      <Menu newGame={newGame} showWord={showWord} />
     </div>
   );
 }
